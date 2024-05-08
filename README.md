@@ -32,4 +32,7 @@ This module integrates PayPal payments through WesternBid into your Prestashop o
 
 For any issues or questions regarding the module, please open an issue in this GitHub repository or contact our support team web@starter.ooo
 
+## Developed
+This module developer by https://web.starter.ooo
+
 
