@@ -41,7 +41,7 @@ class Westernbid_StarterCallbackModuleFrontController extends ModuleFrontControl
         {
             $id_order = (int) Tools::getValue('id_order');
             // Completed
-            if ($data['payment_status'] == 'Pending')
+            if ($data['payment_status'] == 'Completed')
             {
                 $orderHistory = new OrderHistory();
                 $orderHistory->id_order = $id_order;
