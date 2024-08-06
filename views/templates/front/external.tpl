@@ -40,19 +40,17 @@
       <input type="hidden" name="zip" value="{$zip}">
       <input type="hidden" name="item_name" value="{$item_name}">
       <input type="hidden" name="amount" value="{$amount}">
-      <input type="hidden" name="shipping" value="{$shipping_cost}">
+      <input type="hidden" name="shipping" value="0">
       <input type="hidden" name="currency_code" value="{$currency_code}">
-      {foreach from=$products item=product name=productLoop}
-        <input type="hidden" name="item_name_{$smarty.foreach.productLoop.iteration}" value="{$product['name']}">
-        <input type="hidden" name="item_number_{$smarty.foreach.productLoop.iteration}" value="{$product['reference']}">
-        <input type="hidden" name="url_{$smarty.foreach.productLoop.iteration}" value="{$product['url']}">
-        <input type="hidden" name="description_{$smarty.foreach.productLoop.iteration}" value="{$product['descr']}">
-        <input type="hidden" name="amount_{$smarty.foreach.productLoop.iteration}" value="{$product['price']}">
-        <input type="hidden" name="quantity_{$smarty.foreach.productLoop.iteration}" value="{$product['quantity']}">
-      {/foreach}
-        <input type="hidden" name="return" value="{$return_url}">
-        <input type="hidden" name="cancel_return" value="{$cancel_url}">
-        <input type="hidden" name="notify_url" value="{$callback_url}">
+      <input type="hidden" name="item_name_1" value="{$item_name}">
+      <input type="hidden" name="item_number_1" value="{$invoice}">
+      <input type="hidden" name="url_1" value="https://2kolyory.com">
+      <input type="hidden" name="description_1" value="{$item_name}">
+      <input type="hidden" name="amount_1" value="{$amount}">
+      <input type="hidden" name="quantity_1" value="1">
+      <input type="hidden" name="return" value="{$return_url}">
+      <input type="hidden" name="cancel_return" value="{$cancel_url}">
+      <input type="hidden" name="notify_url" value="{$callback_url}">
       <div class="text-sm-center">
         <button type="submit" class="btn btn-primary">
           {l s='Pay' mod='westernbid_starter'}

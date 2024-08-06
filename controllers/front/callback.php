@@ -28,6 +28,7 @@ class Westernbid_StarterCallbackModuleFrontController extends ModuleFrontControl
         $output = Tools::file_get_contents("php://input");
         $data = array();
         parse_str($output, $data);
+//	file_put_contents('output.txt', $output);
 
         $secret_key = Configuration::get(Westernbid_Starter::STARTER_WB_SECRETKEY);
         $wb_login = Configuration::get(Westernbid_Starter::STARTER_WB_LOGIN);

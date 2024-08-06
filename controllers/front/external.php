@@ -66,7 +66,8 @@ class Westernbid_StarterExternalModuleFrontController extends ModuleFrontControl
         $stateId = $address->id_state;
         $state = new State($stateId);
 
-        $amount = $this->context->cart->getOrderTotal(true, Cart::BOTH);
+//        $amount = $this->context->cart->getOrderTotal(true, Cart::BOTH);
+        $amount = $this->context->cart->getOrderTotal();
         $secret_key = Configuration::get(Westernbid_Starter::STARTER_WB_SECRETKEY);
         $wb_login = Configuration::get(Westernbid_Starter::STARTER_WB_LOGIN);
 
